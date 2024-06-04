@@ -21,7 +21,6 @@ class ImageRequest(BaseModel):
 @app.post("/predict/")
 async def predict(request: ImageRequest):
     try:
-        print("good")
         tensor_bytes = base64.b64decode(request.image_tensor)
         np_array = np.frombuffer(tensor_bytes, dtype=np.float32).copy()
         input_tensor = torch.from_numpy(np_array).reshape((1, 3, 224, 224))
