@@ -16,8 +16,7 @@
 ### 1. Сервис препроцессинга
 
 Запустите сервис препроцессинга:
-
-    ```bash
+    ```{r, engine='bash', count_lines}
     uvicorn preprocessing_service:app --port 8000 --workers num_workers
     ```
 
@@ -26,9 +25,8 @@
 Создайте файл preprocessing_service.py и поместите в него соответствующий код.
 
 Запустите сервис препроцессинга с 4 воркерами:
-
-    ```bash
-    uvicorn ml_service:app --port 8001 --workers num_workers
+    ```{r, engine='bash', count_lines}
+    uvicorn preprocessing_service:app --port 8000 --workers num_workers
     ```
     
 **num_workers** - количество одновременно запущенных процессов.
