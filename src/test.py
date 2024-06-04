@@ -4,7 +4,7 @@ import threading
 def send_request(task_id, image_url):
     preprocessing_service_url = "http://localhost:8000/preprocess/"
     payload = {
-        "task_id": task_id,
+        "taskId": task_id,
         "imageUrl": image_url
     }
     response = requests.post(preprocessing_service_url, json=payload)
