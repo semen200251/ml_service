@@ -16,6 +16,7 @@
 ### 1. Сервис препроцессинга
 
 Запустите сервис препроцессинга:
+
     ```bash
     uvicorn preprocessing_service:app --port 8000 --workers num_workers
     ```
