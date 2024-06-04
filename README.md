@@ -26,6 +26,7 @@
 Создайте файл preprocessing_service.py и поместите в него соответствующий код.
 
 Запустите сервис препроцессинга с 4 воркерами:
+
     ```bash
     uvicorn preprocessing_service:app --port 8000 --workers num_workers
     ```
