@@ -23,6 +23,6 @@
 
 Запустите сервис c моделью:
 
-    uvicorn preprocessing_service:app --port 8000 --workers num_workers
+    uvicorn preprocessing_service:app --port 8001 --workers num_workers
     
 **num_workers** - количество одновременно запущенных процессов.
