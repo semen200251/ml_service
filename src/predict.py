@@ -15,7 +15,7 @@ model.load_state_dict(torch.load('resnet101.pth', map_location=torch.device('cpu
 model.eval()
 
 class ImageRequest(BaseModel):
-    task_id: int
+    taskId: int
     image_tensor: str
 
 @app.post("/predict/")
@@ -30,7 +30,7 @@ async def predict(request: ImageRequest):
         _, predicted_idx = torch.max(output, 1)
         predicted_class_id = predicted_idx.item()
 
-        return {"task_id": request.task_id, "class_id": predicted_class_id}
+        return {"taskId": request.taskId, "classId": predicted_class_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {e}")
     
