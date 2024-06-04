@@ -9,7 +9,7 @@
     pip install -r requirements.txt
     ```
     
-3. Убедитесь, что у вас есть файл модели resnet101.pth в той же директории, что и ml_service.py.
+3. Убедитесь, что у вас есть файл модели resnet101.pth в той же директории, что и predict.py.
 
 ## Запуск сервисов
 
@@ -23,6 +23,6 @@
 
 Запустите сервис c моделью:
 
-    uvicorn preprocessing_service:app --port 8001 --workers num_workers
+    uvicorn predict:app --port 8001 --workers num_workers
     
 **num_workers** - количество одновременно запущенных процессов.
