@@ -18,7 +18,7 @@ preprocess = transforms.Compose([
 ])
 
 class ImageRequest(BaseModel):
-    task_id: int
+    taskId: int
     imageUrl: str
 
 @app.post("/preprocess/")
@@ -33,9 +33,9 @@ async def preprocess_image(request: ImageRequest):
 
         tensor_bytes = input_tensor.numpy().tobytes()
         tensor_base64 = base64.b64encode(tensor_bytes).decode('utf-8')
-
+        
         payload = {
-            "task_id": request.task_id,
+            "taskId": request.taskId,
             "image_tensor": tensor_base64
         }
 
